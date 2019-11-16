@@ -15,6 +15,6 @@ RUN apt-get install -y libsm6 libxext6 libxrender-dev
 
 # Install python dependencies
 RUN pip install -r requirements-docker.txt
-RUN cd mask-rcnn && pip install .
-
-#CMD ["sh", "scripts/launch-eq-notebook.sh"]
+COPY mask-rcnn /mask-rcnn
+RUN chmod +x /mask-rcnn
+RUN cd /mask-rcnn && pip install .
