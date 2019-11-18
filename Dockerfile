@@ -1,4 +1,5 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:1.12.3-gpu-py3
+# Current `latest` tensorflow:2.0.0-gpu-py3 is too new for HPC
 
 # Create app directory
 WORKDIR /app
