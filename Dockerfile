@@ -7,8 +7,6 @@ WORKDIR /app
 COPY . .
 
 # Install opencv deps
-#RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 16126D3A3E5C1192 
-#RUN gpg --export --armor 16126D3A3E5C1192 | apt-key add - 
 RUN apt-get clean
 RUN apt-get update
 RUN apt-get install -y libsm6 libxext6 libxrender-dev
